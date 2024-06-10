@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!--=============== BOXICONS ===============-->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+
+        <!--=============== CSS ===============-->
+        <link rel="stylesheet" href="assets/css/styles.css">
+
+        <title>Responsive bottom navigation</title>
+    </head>
+    <body>
+        <!--=============== HEADER ===============-->
+        <header class="header" id="header">
+            <nav class="nav container">
+                <a href="#" class="nav__logo">Радио</a>
+
+                <div class="nav__menu" id="nav-menu">
+                    <ul class="nav__list">
+                        <li class="nav__item">
+                            <a href="index.html" class="nav__link">
+                                <i class='bx bx-music nav__icon'></i>
+                            </a>
+                        </li>
+                        
+                        <li class="nav__item">
+                            <a href="podcast.html" class="nav__link">
+                                <i class='bx bx-podcast nav__icon' ></i>
+                            </a>
+                        </li>
+
+                        <li class="nav__item">
+                            <a href="radio.html" class="nav__link active-link">
+                                <i class='bx bx-radio nav__icon' ></i>
+                            </a>
+                        </li>
+
+                        <li class="nav__item">
+                            <a href="playlists.html" class="nav__link">
+                                <i class='bx bxs-playlist nav__icon' ></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <a href="" class="nav__img" style="color: black;"><i class='bx bx-search nav__icon' ></i></a>
+            </nav>
+        </header>
+
+        <main>
+            <!--=============== HOME ===============-->
+            <section class="container section section__height">
+                <div class="music" onclick="playmusic('1')">
+                    <h4>1</h4>
+                    <img src="assets/img/europa-plus.webp" alt="" class="image-music">
+                    <div class="name">
+                        <h4>Европа Плюс</h4>
+                        <p>Поп-музыка</p>
+                    </div>
+                    <i class='bx bx-heart nav__icon'></i>
+                </div>
+                <div class="music" onclick="playmusic('2')">
+                    <h4>2</h4>
+                    <img src="assets/img/record.webp" alt="" class="image-music">
+                    <div class="name">
+                        <h4>Радио Рекорд</h4>
+                        <p>Танцевальная</p>
+                    </div>
+                    <i class='bx bx-heart nav__icon'></i>
+                </div>
+                <div class="music" onclick="playmusic('3')">
+                    <h4>3</h4>
+                    <img src="assets/img/auto.webp" alt="" class="image-music">
+                    <div class="name">
+                        <h4>Авторадио</h4>
+                        <p>Разная музыка</p>
+                    </div>
+                    <i class='bx bx-heart nav__icon'></i>
+                </div>
+            </section>
+        </main>
+        
+        <audio id="1" src="https://ep256.hostingradio.ru:8052/europaplus256.mp3" preload="auto"></audio>
+        <audio id="2" src="https://radiorecord.hostingradio.ru/rr_main96.aacp" preload="auto"></audio>
+        <audio id="3" src="https://pub0102.101.ru:8443/stream/air/mp3/256/100" preload="auto"></audio>
+
+        <!--=============== MAIN JS ===============-->
+        <script src="assets/js/main.js"></script>
+        <script src="assets/js/player.js"></script>
+    </body>
+</html>
